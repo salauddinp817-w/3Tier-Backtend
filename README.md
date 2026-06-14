@@ -42,3 +42,8 @@ graph TD
     App1 --> DB1
     App2 --> DB2
     App3 --> DB3
+```
+Infrastructure Configuration Details
+Backend Tier: Deployed on isolated private subnets on Ubuntu EC2 instances running a Node.js Express server on Port 3000.
+Database Connection: Connects locally to your database instance to safely manage and expose the Tasks table to the frontend via API endpoints.
+Frontend Tier: Traffic is routed through an Internal Load Balancer accepting requests from the Flask web tier running on Port 5000.
